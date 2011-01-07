@@ -227,6 +227,12 @@
 
     (use-local-map review-mode-map)
 
+    ;; コメント
+    (setq comment-start "#@#")
+
+    ;; インデント
+    (setq indent-line-function 'review-mode-indent-line)
+
     (run-hooks 'review-mode-hook)
     )
   )
@@ -502,3 +508,6 @@
     )
   )
 )
+
+(defun review-mode-indent-line ()
+  ())
